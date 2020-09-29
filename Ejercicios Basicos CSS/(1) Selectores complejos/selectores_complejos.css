@@ -1,0 +1,41 @@
+li[id] {
+    color: #b900b9; /* Te he puesto este otro color porque el que nos dejaste no se distinguía bien */
+    font-size: 0.85em;
+    font-family: Verdana, Geneva, sans-serif;
+    list-style-type: square;
+}
+
+td[rowspan="2"], td[colspan="2"]{
+    background-color: #234E54;
+}
+
+td[rowspan="3"], td[colspan="3"]{
+    background-color: #ACA759;
+}
+
+td[rowspan="4"], td[colspan="4"]{
+    background-color: #CEA885;
+}
+
+.comentarios {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-style: italic;
+    border: thin dotted #AC8159;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+#pregunta3 span {
+    background-color: #FF9;
+}
+
+p + p {
+    text-decoration: underline;
+}
+
+li > a {
+    background-color: #755E8B;
+}
