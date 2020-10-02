@@ -1,0 +1,57 @@
+/*
+No se por qué las letras de la tabla se colapsan con las líneas cuando se abre el html, pero al escalar el navegador una sola vez ya queda bien.
+*/
+
+table{
+    margin: 0 auto;
+    margin-top: 20%;
+}
+.cabecera{
+    background-image: url(imagenes/fondo_gris.gif);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 10%;
+    padding-left: 3%;
+}
+
+.euro{
+    background-image: url(imagenes/euro.png);
+    background-repeat: no-repeat;
+    padding-top: 10%;
+    padding-left: 5%;
+    background-position: -2% -2%;
+}
+.dolar{
+    background-image: url(imagenes/dolar.png);
+    background-repeat: no-repeat;
+    padding-top: 10%;
+    padding-left: 5%;
+    background-position: -2% -2%;
+}
+.libra{
+    background-image: url(imagenes/libra.png);
+    background-repeat: no-repeat;
+    padding-top: 10%;
+    padding-left: 5%;
+    background-position: -2% -2%;
+}
+.yen{
+    background-image: url(imagenes/yen.png);
+    background-repeat: no-repeat;
+    padding-top: 10%;
+    padding-left: 5%;
+    background-position: -2% -2%;
+}
+th[scope="row"]{
+    background-color: rgb(233, 247, 255);
+}
+.par td{
+    background-color: rgba(255, 255, 0, 0.199);
+}
+.par .euro ~ td{
+    background-color: rgba(255, 255, 0, 0.692);
+}
