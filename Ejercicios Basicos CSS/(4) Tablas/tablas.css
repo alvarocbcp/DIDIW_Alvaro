@@ -58,6 +58,10 @@ th[scope="row"]{
 
 /*
 tr:nth-of-type(odd){
-    background-color: #FFFFCC
+    background-color: #FFFFCC;
+}
+
+tr:hover td{
+    background: #FFFF66;
 }
 */
