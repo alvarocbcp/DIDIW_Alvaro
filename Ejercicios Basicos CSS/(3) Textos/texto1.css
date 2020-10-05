@@ -4,13 +4,14 @@ table{
 }
 
 /* No se porque el selector no reconoce la pseudoclase first-child, no me cambia nada en la pag web*/
-p:first-child {             
+p:first-of-type {             
     font-style: italic;
     font-weight: bold;
-    text-indent: 2%;
+    text-indent: 2em;
 }
 
 #consejo {
+    font-family: Tahoma, Geneva, sans-serif;
     background-color: rgba(167, 164, 0, 0.589);
     color: blueviolet;
 }
@@ -37,5 +38,6 @@ h3 {
 #idparaestilo{
     color: white;
     background-color: rgb(165, 121, 206);
-    word-spacing: 15px;
+    word-spacing: 0.7em;
+    letter-spacing: 5px;
 }
