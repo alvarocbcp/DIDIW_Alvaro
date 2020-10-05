@@ -55,3 +55,9 @@ th[scope="row"]{
 .par .euro ~ td{
     background-color: rgba(255, 255, 0, 0.692);
 }
+
+/*
+tr:nth-of-type(odd){
+    background-color: #FFFFCC
+}
+*/
