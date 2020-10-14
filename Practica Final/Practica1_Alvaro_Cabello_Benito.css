@@ -170,6 +170,20 @@ th:hover{
     text-transform: capitalize;
 }
 #our_company_body{
-    border: 1px solid black;
-    width: 75%;
+    width: 70%;
+    margin-left: 10px;
+    background-image: url(img/edificio.jpg);
+    background-repeat: no-repeat;
+    background-size: 170px 118px;
+    background-position: 30px 60px;
+    box-shadow: 0px 3px 10px;
+}
+#our_company_body > p{
+    line-height: 15px;
+    margin: 2px 2px 2px 250px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.titulo_p{
+    color: orange;
+    font-weight: bold;
 }
