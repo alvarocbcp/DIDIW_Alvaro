@@ -1,36 +1,175 @@
 #cabecera{
-    border: 1px solid black;
     width: 100%;
     height: 100px;
     box-shadow: 0px 5px 20px;
+    display: inline-block;
 }
 .hr{
     margin-top: 0px;
-    border: 2px solid orange;
+    border: 0.1em solid orange;
+    background-color: orange;
 }
 #logo{
     position: relative;
     left: 10px;
     top: 8px;
-    max-width: 50px;
-    max-height: 50px;
+    height: 60px;
+    width: 60px;
+    background-image: url(img/icono.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5px -3px;
 }
 #nombre_compania{
     position: relative;
-    top: -50px;
+    top: -55px;
     left: 80px;
-    width: 200px;
+    width: 300px;
     height: 60px;
 }
 #nombre_compania p:first-of-type{
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #slogan{
     margin-top: 0px;
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: monospace;
     margin-left: 50px;
+}
+#div_tabla{
+    position: relative;
+    top: -100px;
+    float: right;
+    margin-right: 50px;
+    width: 17%;
+    height: 40%;
+    display: inline-block;
+}
+th{
+    padding-left: 30px;
+    text-align: right;
+    font-size: 1.2em;
+}
+th:hover{
+    color: green;
+    font-size: 1.5em;
+}
+#sitemap{
+    background-image: url(img/siteweb.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 5px 1px;
+}
+#home{
+    background-image: url(img/home.png);
+    background-repeat: no-repeat;
+    background-size: 30px 20px;
+    background-position:0px 1px;
+}
+#search{
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position:5px 1px;
+}
+#cuerpo{
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 250px;
+    margin-top: 0px;
+    box-shadow: 0px 5px 20px;
+    display: inline-block;
+}
+.apartados{
+    height: 35px;
+    width: 25%;
+    margin-left: 10px;
+    padding-right: 10px;
+    border: 1px solid whitesmoke;
+    background-image: url(img/flecha.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 5px 8px;
+    box-shadow: 0px 3px 10px;
+}
+.apartados:hover{
+    background-color: lightgreen;
+}
+.apartados p{
+    font-size: 1.3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: grey;
+    text-align: right;
+    position: relative;
+    bottom: 15px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+#equipo{
+    position: relative;
+    top: -223px;
+    right: 3%;
+    height: 225px;
+    width: 60%;
+    float: right;
+    background-image: url(img/equipo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 3px 10px;
+}
+#slogan_grande{
+    position: relative;
+    top: 150px;
+    right: 50px;
+    float: right;
+    height: 25%;
+    width: 33%;
+    background-color: rgba(128, 128, 128, 0.76);
+}
+#slogan_grande p{
+    position: relative;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+#contenido{
+    position: relative;
+    top: -20px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    height: 450px;
+    box-shadow: 0px 5px 20px;
+}
+#our_company_tittle{
+    width: 20%;
+    background-image: url(img/guion.png);
+    background-repeat: no-repeat;
+    background-size: 40px 50px;
+    background-position: 0px -5px;
+}
+.hr_grey{
+    border: 0.1em solid rgb(206, 206, 206);
+    background-color: rgb(206, 206, 206);
+}
+.titulo{
+    margin: 0px 0px 5px 30px;
+    color: grey;
+    font-size: 1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+#our_company_body{
+    border: 1px solid black;
+    width: 75%;
 }
