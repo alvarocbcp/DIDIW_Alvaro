@@ -1,320 +1,381 @@
-#cabecera{
+.main{
+    display: flex;
     width: 100%;
-    height: 100px;
-    box-shadow: 0px 5px 20px;
-    display: inline-block;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
-.hr{
-    margin-top: 0px;
-    border: 0.1em solid orange;
-    background-color: orange;
+#cabecera{
+    display: flex;
+    align-items: center;
+    border-top: 2px solid orange;
+    width: 99%;
+    height: 10%;
+    margin: 0px;
+    box-shadow: 0px 0.8vh 4vh;
 }
-#logo{
-    position: relative;
-    left: 10px;
-    top: 8px;
-    height: 60px;
-    width: 60px;
+#menu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-top: 2px solid orange;
+    box-shadow: 0px 0.8vh 4vh;
+    width: 99%;
+    height: 30%;
+    margin: 0px;
+}
+#pie{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid orange;
+    box-shadow: 0px 0.8vh 4vh;
+    width: 99%;
+    height: 55%;
+    margin: 0px;
+}
+#compania{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    height: 80%;
+    margin-left: 1%;
     background-image: url(img/icono.PNG);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 5px -3px;
-}
-#nombre_compania{
-    position: relative;
-    top: -55px;
-    left: 80px;
-    width: 300px;
-    height: 60px;
-}
-#nombre_compania p:first-of-type{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 2em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-#slogan{
-    margin-top: 0px;
-    font-size: 1.5em;
-    font-family: monospace;
-    margin-left: 50px;
-}
-#div_tabla{
-    position: relative;
-    top: -100px;
-    float: right;
-    margin-right: 50px;
-    width: 17%;
-    height: 40%;
-    display: inline-block;
-}
-th{
-    padding-left: 30px;
-    text-align: right;
-    font-size: 1.2em;
-}
-th:hover{
-    color: green;
-    font-size: 1.5em;
-}
-#sitemap{
-    background-image: url(img/siteweb.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 5px 1px;
+    background-size: 7vh;
+    background-position: 2.5vw;
 }
 #home{
-    background-image: url(img/home.png);
-    background-repeat: no-repeat;
-    background-size: 30px 20px;
-    background-position:0px 1px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    text-align: right;
+    width: 30%;
+    height: 50%;
+    margin-left: 35%;
 }
-#search{
-    background-image: url(img/search.png);
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position:5px 1px;
-}
-#cuerpo{
-    position: relative;
-    top: -20px;
-    width: 100%;
-    height: 250px;
-    margin-top: 0px;
-    box-shadow: 0px 5px 20px;
-    display: inline-block;
-}
-.apartados{
-    height: 35px;
+#apartados{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
     width: 25%;
-    margin-left: 10px;
-    padding-right: 10px;
-    border: 1px solid whitesmoke;
+    margin-left: 1%;
+}
+.apartado{
+    box-shadow: 0px 0.5vh 2vh;
+    width: 100%;
+    height: 20%;
+    text-align: right;
     background-image: url(img/flecha.png);
     background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 5px 8px;
-    box-shadow: 0px 3px 10px;
-}
-.apartados:hover{
-    background-color: lightgreen;
-}
-.apartados p{
-    font-size: 1.3em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: grey;
-    text-align: right;
-    position: relative;
-    bottom: 15px;
-    text-transform: capitalize;
-    font-variant: small-caps;
+    background-size: 3vh;
+    background-position: 1vh 0.5vh;
 }
 #equipo{
-    position: relative;
-    top: -223px;
-    right: 3%;
-    height: 225px;
-    width: 60%;
-    float: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    box-shadow: 0px 0.5vh 2vh;
+    height: 80%;
+    width: 63%;
+    margin-left: 10%;
     background-image: url(img/equipo2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 3px 10px;
 }
-#slogan_grande{
-    position: relative;
-    top: 150px;
-    right: 50px;
-    float: right;
+#slogan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(168, 168, 168, 0.747);
     height: 25%;
-    width: 33%;
-    background-color: rgba(128, 128, 128, 0.76);
+    width: 30%;
+    margin-bottom: 2%;
+    margin-right: 2%;
 }
-#slogan_grande p{
-    position: relative;
-    bottom: 10px;
-    color: white;
-    text-align: center;
-    vertical-align: center;
-    font-size: 1.5em;
+#arriba{
+    display: flex;
+    width: 98%;
+    height: 80%;
+    margin-top: 1%;
+}
+#abajo{
+    display: flex;
+    align-items: center;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid orange;
+    box-shadow: 0px 0.5vh 2vh;
+    width: 98%;
+    height: 10%;
+    margin-top: 1%;
+}
+#izq_pie{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+}
+#dcha_pie{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 100%;
+    margin-left: 1%;
+}
+#arr_izq{
+    display: flex;
+    border-bottom: 2px solid orange;
+    flex-direction: column;
+    box-shadow: 0px 0.5vh 2vh;
+    width: 100%;
+    height: 48%;
+}
+#aba_izq{
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid grey;
+    box-shadow: 0px 0.5vh 2vh;
+    width: 100%;
+    height: 48%;
+    margin-top: 1%;
+}
+#arr_dcha{
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid orange;
+    box-shadow: 0px 0.5vh 2vh;
+    width: 100%;
+    height: 70%;
+}
+#aba_dcha{
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid grey;
+    box-shadow: 0px 0.5vh 2vh;
+    width: 100%;
+    height: 27%;
+    margin-top: 2%;
+}
+#name{
+    display: block;
+    font-size: 5vh;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-variant: small-caps;
-    text-transform: capitalize;
+    color: grey;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 30%;
+    height: 50%;
 }
-#contenido{
-    position: relative;
-    top: -20px;
+#slogan_cabecera{
+    margin-top: 1vh;
     display: block;
-    width: 100%;
-    margin-top: 10px;
-    height: 580px;
-    box-shadow: 0px 5px 20px;
+    font-size: 2vh;
+    color: grey;
+    height: 50%;
+    margin-left: 45%;
 }
-#our_company_tittle{
-    width: 20%;
+#casa{
+    height: 100%;
+    font-size: 3vh;
+    background-image: url(img/home.png);
+    background-repeat: no-repeat;
+    background-size: 7vh;
+    background-position: 3vw 2.5vh;
+}
+#lupa{
+    height: 100%;
+    font-size: 3vh;
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-size: 4vh;
+    background-position: 3.2vw 2.5vh;
+}
+#web{
+    height: 100%;
+    font-size: 3vh;
+    background-image: url(img/siteweb.png);
+    background-repeat: no-repeat;
+    background-size: 4vh;
+    background-position: 2.5vw 2.8vh;
+}
+#home div p:hover{
+    font-size: 3.2vh;
+    color: green;
+}
+.apartado a{
+    display: block;
+    font-size: 3vh;
+    margin-top: 1%;
+    text-decoration: none;
+    margin-right: 1%;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    color: grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.apartado:hover{
+    background-color: lightgreen;
+}
+#slogan p{
+    display: block;
+    font-size: 3vh;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+div.title{
+    display: flex;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    border-bottom: 2px solid lightgrey;
     background-image: url(img/guion.png);
     background-repeat: no-repeat;
-    background-size: 40px 50px;
-    background-position: 0px -5px;
+    background-size: 5vh;
 }
-.hr_grey{
-    border: 0.1em solid rgb(206, 206, 206);
-    background-color: rgb(206, 206, 206);
-}
-.titulo{
-    margin: 0px 0px 5px 30px;
-    color: grey;
-    font-size: 1.5em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-variant: small-caps;
-    text-transform: capitalize;
-}
-#our_company_body{
-    width: 72%;
-    margin-left: 10px;
+div.text{
+    height: 80%;
     background-image: url(img/edificio.jpg);
     background-repeat: no-repeat;
-    background-size: 170px 118px;
-    background-position: 30px 60px;
-    box-shadow: 0px 3px 10px;
+    background-size: 20vh;
+    background-position-y: center;
+    background-position-x: 5vh;
+
 }
-#our_company_body > p{
-    line-height: 15px;
-    margin: 2px 2px 2px 250px;
-    font-family: 'Times New Roman', Times, serif;
-    color: grey;
-}
-#our_company_body > .titulo_p{
-    color: orange;
-    font-weight: bold;
-}
-#news{
-    position: relative;
-    float: right;
-    top: -220px;
-    width: 25%;
-    height: 260px;
-    margin-right: 10px;
-    box-shadow: 0px 3px 10px;
-    background-image: url(img/guion.png);
-    background-repeat: no-repeat;
-    background-size: 40px 50px;
-    background-position: -1px -4px;
-}
-#news > p{
-    line-height: 15px;
-    margin: 2px 2px 2px 5px;
-    font-family: 'Times New Roman', Times, serif;
-    color: grey;
-}
-.p_gris{
-    padding-bottom: 10px;
-}
-#news > .titulo_p{
-    color: orange;
-    font-weight: bold;
-}
-#news > a{
-    margin-left: 5px;
-    color: grey;
-    text-decoration: none;
-}
-#news > a:hover{
-    font-size: 1.2em;
-}
-#solution{
+.title p{
     display: block;
-    float: left;
-    position: relative;
-    height: 250px;
-    top: 10px;
-    left: 10px;
-    width: 72%;
-    box-shadow: 0px 3px 10px;
-}
-#solution_tittle{
-    background-image: url(img/guion.png);
-    background-repeat: no-repeat;
-    background-size: 40px 50px;
-    background-position: -1px -4px;
-}
-.recuadro{
-    width: 30%;
-    height: 170px;
-    margin-left: 20px;
-    display: inline-block;
-    border-radius: 15px;
-    background-color: rgba(189, 189, 189, 0.479);
-    line-height: 15px;
-}
-.titulo_center{
-    color: orange;
-    font-weight: bold;
-    text-align: center;
+    margin-left: 3%;
+    font-size: 3vh;
     text-transform: capitalize;
     font-variant: small-caps;
+    color: grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.link_orange{
-    margin-left: 20px;
+.text p{
+    display: block;
+    margin-top: 0;
+    line-height: 2vh;
+    font-size: 1.8vh;
+    margin-left: 20%;
+    margin-bottom: 1vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+p.titulo{
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.texto{
+    display: flex;
+    height: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+.cajas{
+    width: 30%;
+    height: 60%;
+    background-color: rgb(228, 228, 228);
+    border-radius: 1vh;
+    text-align: center;
+}
+.cajas p, .cajas a{
+    display: block;
+    line-height: 2vh;
+    font-size: 1.5vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: grey;
+}
+.cajas a{
+    text-align: left;
+    margin-left: 4%;
     color: orange;
 }
-.recuadro > .p_gris2{
-    padding-bottom: 10px;
+.cajas p.titulo{
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#arr_dcha .title p{
+    margin-left: 10%;
+}
+#arr_dcha .title{
+    background-position: 0.6vh 0vh;
+    height: 13%;
+}
+#arr_dcha .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+}
+.cajas_dcha{
+    width: 100%;
+    height: 30%;
+}
+.cajas_dcha p{
+    display: block;
+    font-size: 2vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2%;
+}
+#a_news a{
+    display: block;
+    font-size: 2.5vh;
+    margin-left: 2%;
+    text-decoration: none;
     color: grey;
-    text-indent: 20px;
-    margin-left: 20px;
-    line-height: 15px;
+    text-transform: capitalize;
 }
-.link_orange:hover{
-    font-size: 1.2em;
+#a_news a:hover{
+    font-size: 2.6vh;
+    color: rgb(152, 0, 182);
 }
-#newsletter{
-    width: 25%;
-    height: 210px;
-    float: right;
-    position: relative;
-    left: 375px;
-    top: -200px;
-    box-shadow: 0px 3px 10px;
+#aba_dcha .title{
+    background-position: 0.6vh -1vh;
 }
-#newsletter_tittle{
-    background-image: url(img/guion.png);
-    background-repeat: no-repeat;
-    background-size: 40px 50px;
-    background-position: -1px -4px;
+#aba_dcha .title p{
+    margin-left: 10%;
+}
+#formu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+#formu div{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #email{
-    margin: 20px;
-    height: 30px;
-    box-shadow: 0px 3px 10px;
-    width: 85%;
+    display: block;
+    width: 19em;
+    height: 1.5em;
+    font-size: 2vh;
+    box-shadow: 0.5vh 0.5vh 2vh;
 }
 #boton{
-    margin: 0px 140px;
-    height: 30px;
-    width: 25%;
-    align-items: center;
-    background-color: orange;
-    border-radius: 5px;
-    color: white;
-}
-#boton:hover{
-    font-size: 1.1em;
-}
-#pie{
-    position: relative;
-    width: 1480px;
+    width: 10em;
+    height: 2em;
     display: block;
-    float: right;
-    height: 55px;
-    top: -190px;
-    left: -10px;
-    box-shadow: 0px 3px 10px;
+    font-size: 2vh;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
 }
-#pie hr{
-    margin: 0px;
-}
-.p_gris3{
+#abajo p{
+    display: block;
     color: grey;
-    margin-left: 20px;
+    font-size: 2.2vh;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1%;
 }
