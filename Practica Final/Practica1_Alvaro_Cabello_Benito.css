@@ -202,7 +202,7 @@
     background-position: 2.5vw 2.8vh;
 }
 #home div p:hover{
-    font-size: 3.2vh;
+    font-weight: bold;
     color: green;
 }
 .apartado a{
