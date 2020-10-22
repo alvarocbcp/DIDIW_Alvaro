@@ -1,0 +1,35 @@
+.contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    height: 605px;
+    width: 675px;
+}
+.caja{
+    border: 1px solid black;
+    height: 180px;
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+.contenedor div:nth-child(1n+4){
+    background-color: green;
+}
+.contenedor div:nth-child(1n+7){
+    background-color: blue;
+}
+.contenedor div:nth-last-child(even){
+    display: none;
+}
+.izq{
+    float: left;
+}
+.dcha{
+    float: right;
+}
+.izq_clear{
+    clear: left;
+    float: left;
+}
