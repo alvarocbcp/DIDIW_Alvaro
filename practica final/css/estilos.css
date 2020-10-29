@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgba(211, 211, 211, 0.9);
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    max-width: 1000px;
+    height: 10%;
+    background-color: white;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-top: 3px solid green;
+    box-shadow: 0px 0px 5px white;
+}
+
+/*Parte izquierda*/
+
+.nombre{
+    width: 330px;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    border: 3px solid green;
+    background-color: rgb(218, 218, 218);
+    border-radius: 100%;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.nombre-empresa{
+    text-align: center;
+}
+
+.nombre-empresa h1{
+    font-weight: 100;
+    color: rgb(20, 119, 0);
+    font-variant: small-caps;
+    text-shadow: 0px 0px 1px white;
+}
+
+.nombre-empresa h4{
+    font-weight: 100;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 20px;
+    color:rgb(20, 119, 0);
+    text-shadow: 0px 0px 1px white;
+}
+
+/*Parte derecha*/
+
+header nav{
+    align-self: flex-end;
+}
+
+.menu-header{
+    width: 400px;
+    height: 60px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-header label{
+    color: rgb(20, 119, 0);
+    font-size: 18px;
+    width: 90px;
+    height: 60px;
+    border-top: 5px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.menu-header label:hover{
+    background-color: rgba(228, 228, 228, 0.4);
+    border-top: 5px solid green;
+    color: black;
+}
+
+/*MAIN*/
+
+main{
+    height: 80%;
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    margin: 5px auto;
+    padding: 0 10px;
+    border-top: 3px solid green;
+    box-shadow: 0px 0px 5px white;
+}
+
+.container1{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container1 ul{
+    margin-top: 5px;
+    width: 34%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 5px;
+}
+
+.container1 ul li{
+    padding: 5px;
+    background-color: transparent;
+    margin-left: 10px;
+    border-left: 5px solid transparent;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.container1 ul li:hover{
+    background-color: rgba(158, 158, 158, 0.295);
+    border-left: 5px solid green;
+}
+
+.container1 ul li label{
+    color: green;
+    font-size: 18px;
+}
+
+.container1 ul li label a{
+    font-variant: small-caps;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+.img-grupo{
+    position: relative;
+    width: 65%;
+    height: 95%;
+    background-image: url(../img/equipo2.jpg);
+    background-size: cover;
+    box-shadow: 1px 1px 5px;
+}
+
+.img-grupo .slogan{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 35%;
+    height: 25%;
+    background-color: rgba(175, 175, 175, 0.418);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.img-grupo .slogan:hover > a{
+    color: black;
+}
+
+.img-grupo .slogan:hover{
+    background-color: white;
+}
+
+.img-grupo div a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container2{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2 .izq{
+    width: 70%;
+    height: 95%;
+    background-color: white;
+    border-top: 3px solid green;
+}
+
+.container2 .dcha{
+    width: 27%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container2 .izq .izq-arriba{
+    width: 100%;
+    height: 170px;
+    box-shadow: 1px 1px 5px;
+}
+
+.container2 .izq .izq-arriba .img-edificio{
+    margin: 10px;
+    width: 180px;
+    height: 120px;
+    clear: both;
+    float: left;
+}
+
+.container2 .izq .izq-arriba p{
+    float: left;
+    width: 70%;
+    display: block;
+    font-size: small;
+}
+
+.container2 .izq .izq-arriba p:nth-child(2n-1){
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.container2 .izq .izq-arriba .img-edificio img{
+    width: 100%;
+    height: 100%;
+}
+
+.container2 .izq .izq-arriba label{
+    float: left;
+    color: green;
+}
+
+.container2 .izq .izq-arriba label h2{
+    display: inline;
+    width: 100%;
+    font-weight: 100;
+    font-variant: small-caps;
+}
+
+.container2 .izq .izq-abajo{
+    width: 100%;
+    margin-top: 10px;
+    height: 160px;
+    box-shadow: 1px 1px 5px;
+}
+
+.container2 .izq .izq-abajo label{
+    float: left;
+    color: green;
+}
+
+.container2 .izq .izq-abajo label h2{
+    display: inline;
+    width: 100%;
+    font-weight: 100;
+    font-variant: small-caps;
+}
+
+.container2 .izq .izq-abajo .cuadros{
+    clear: both;
+    width: 98%;
+    margin: 10px;
+    height: 82%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.container2 .izq .izq-abajo .cuadros .cuadro{
+    background-color: rgba(168, 168, 168, 0.904);
+    padding: 10px;
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid rgba(124, 124, 124, 0.39);
+}
+
+.container2 .izq .izq-abajo .cuadros .cuadro p{
+    text-align: justify;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.container2 .izq .izq-abajo .cuadros .cuadro p:nth-child(1){
+    color: green;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container2 .izq .izq-abajo .cuadros .cuadro a{
+    color: green;
+    font-weight: bold;
+}
+
+.container2 .dcha .dcha-arriba{
+    width: 100%;
+    height: 65%;
+    padding: 10px;
+    box-shadow: 1px 1px 5px;
+}
+
+.container2 .dcha .dcha-arriba label{
+    float: left;
+    color: green;
+}
+
+.container2 .dcha .dcha-arriba label h2{
+    display: inline;
+    width: 100%;
+    font-weight: 100;
+    font-variant: small-caps;
+}
+
+.container2 .dcha .dcha-arriba p{
+    clear: both;
+    font-size: small;
+}
+
+.container2 .dcha .dcha-arriba p:nth-child(2n){
+    color: green;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.container2 .dcha .dcha-arriba a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.container2 .dcha .dcha-abajo{
+    width: 100%;
+    height: 33%;
+    box-shadow: 1px 1px 5px;
+}
+
+.container2 .dcha .dcha-abajo label{
+    float: left;
+    color: green;
+}
+
+.container2 .dcha .dcha-abajo label h2{
+    display: inline;
+    width: 100%;
+    font-weight: 100;
+    font-variant: small-caps;
+}
+
+.container2 .dcha .dcha-abajo form{
+    clear: both;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2 .dcha .dcha-abajo form input[type="text"]{
+    width: 90%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    transition: all 300ms ease;
+}
+
+.container2 .dcha .dcha-abajo form input[type="text"]:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+    border: 1px solid grey;
+}
+
+input[type="text"]:hover::placeholder{
+    color: black;
+}
+
+input[type="text"]::placeholder{
+    color: white;
+}
+
+.container2 .dcha .dcha-abajo form input[type="button"]{
+    background-color: green;
+    color: white;
+    height: 35px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.container2 .dcha .dcha-abajo form input[type="button"]:hover{
+    background-color: rgba(0, 128, 0, 0.582);
+    color: black;
+}
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    max-width: 1000px;
+    height: 10%;
+    background-color: white;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 3px solid green;
+    box-shadow: 0px 0px 5px white;
+}
+
+footer h4{
+    font-weight: 100;
+    font-size: 18px;
+    color: grey;
+}
