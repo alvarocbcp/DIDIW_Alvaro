@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-global{
+    height: 65vh;
+    font-size: 22px;
+    border: 1px solid black;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.subcontenedor1, .subcontenedor2{
+    border: 1px dotted blue;
+    flex-grow: 1;
+}
+
+.subcontenedor1 ol{
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+.contenedor1, .contenedor2{
+    margin: 0.5rem;
+    flex-basis: 100%;
+}
+
+.contenedor1{
+    display: flex;
+    margin-bottom: 0;
+}
+
+.contenedor2{
+    border: 1px dotted red;
+}

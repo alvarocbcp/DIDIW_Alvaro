@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecera, .container{
+    width: 80%;
+    margin: 1em auto;
+}
+
+.cabecera{
+    position: sticky;
+    top: 1em;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: lightblue;
+    height: 6em;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100px 100px;
+}
+
+.cabecera h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container{
+    text-indent: 3em;
+    line-height: 2em;
+    border: 2px solid black;
+}
+
+.container p{
+    text-align: justify;
+    font-style: italic;
+}
+
+.container p::first-letter{
+    font-size: 2em;
+    font-weight: bold;
+    text-indent: 5em;
+}

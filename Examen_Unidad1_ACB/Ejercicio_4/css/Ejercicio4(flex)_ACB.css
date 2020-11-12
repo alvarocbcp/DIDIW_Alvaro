@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-global{
+    margin: 20px auto;
+    height: 80vh;
+    width: 95vw;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container1, .container2{
+    border: 1px solid black;
+    margin: 0.5em;
+}
+
+.container1{
+    flex-grow: 7;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container1 p:nth-child(3){
+    align-self: flex-end;
+}
+
+.container2{
+    flex-grow: 3;
+}
