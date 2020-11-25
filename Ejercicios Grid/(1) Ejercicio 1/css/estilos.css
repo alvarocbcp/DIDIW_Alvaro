@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+h4{
+    margin-top: 40px;
+}
+
+.container{
+    margin: 40px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-template-rows: repeat(3, 1fr) 2fr 2fr;
+    grid-gap: 0.5em;
+    text-align: left;
+}
+
+.item:nth-child(odd){
+    background-color: rgb(175, 175, 175);
+}
+
+.item:nth-child(even){
+    background-color: orange;
+}
+
+.item{
+    border-radius: 0.2em;
+    border: 1px solid black;
+}
