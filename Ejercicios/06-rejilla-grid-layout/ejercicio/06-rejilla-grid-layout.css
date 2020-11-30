@@ -8,7 +8,7 @@ div {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1em;  
+    grid-gap: 1em;
 }
 .element {
     border: 10px solid green;
@@ -25,27 +25,43 @@ div {
     margin: 0.5em;
 }
 
-@media all and (min-width: 240px){
+@media all and (min-width: 768px){
     .row{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1em;
     }
-}
-
-@media all and (min-width: 768px){
-    .row{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1em;
+    .element{
+        color: blue;
+        padding: 0;
+        margin: 0;
     }
 }
 
 @media all and (min-width: 1024px){
     .row{
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+    }
+    .element{
+        color: green;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media all and (min-width: 1200px){
+    .row{
+        display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 1em;
         justify-content: space-between;
+    }
+    .element{
+        color: red;
+        margin: 0;
+        padding: 0;
+
     }
 }
