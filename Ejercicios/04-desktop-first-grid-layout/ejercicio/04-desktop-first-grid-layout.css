@@ -8,10 +8,9 @@ div.container{
   font-size: 16px;
   max-width: 1024px;
   display: grid;
-  grid-template-areas: "nav nav nav nav"
-                       "article article article aside"
-                       "article article article ."
-                       "article article article .";
+  grid-template-columns: 7fr 3fr;
+  grid-template-areas: "nav nav"
+                       "article aside";
 }
 
 div.container nav {
@@ -40,6 +39,7 @@ div.container aside {
   font-size: 1em;
   box-sizing: border-box;
   grid-area: aside; /* Importante para resolver el ejercicio */
+  align-self: start;
 }
 
 @media all and (max-width: 768px){
@@ -51,10 +51,10 @@ div.container aside {
 
 @media all and (max-width: 240px){
   div.container{
-    grid-template-areas: "nav nav nav"
-                         "article article article"
-                         "article article article"
-                         "aside aside aside";
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav"
+                         "article"
+                         "aside";
   }
   div.container article{
     background-image: url(img/content-is-like-water-1.jpg);
