@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="jQuery.js"></script>
+    <style>
+        .contenedor{
+            width: 100%;
+            max-width: 450px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(219, 158, 255);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .contenedor h1{
+            font-weight: 100;
+        }
+        .contenedor p{
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            animacion();
+        });
+
+        function animacion(){
+            var btn1 = document.querySelector('.btn1');
+            var btn2 = document.querySelector('.btn2');
+            var btn3 = document.querySelector('.btn3');
+            var btn4 = document.querySelector('.btn4');
+            var cont = document.querySelector('.contenedor');
+
+            btn1.addEventListener('click', ()=>{
+                $(".contenedor").fadeIn(1000);
+            });
+
+            btn2.addEventListener('click', ()=>{
+                $(".contenedor").fadeOut(1000);
+            });
+
+            btn3.addEventListener('click', ()=>{
+                $(".contenedor").slideDown(1000);
+            });
+
+            btn4.addEventListener('click', ()=>{
+                $(".contenedor").slideUp(1000);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Efectos FadeIn y FadeOut</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In est non, repellendus cum quaerat voluptas perspiciatis iste rerum perferendis blanditiis?</p>
+    </div>
+    <button class="btn1">Fade In</button>
+    <button class="btn2">Fade Out</button>
+    <button class="btn3">Slide Down</button>
+    <button class="btn4">Slide Up</button>
+</body>
+</html>

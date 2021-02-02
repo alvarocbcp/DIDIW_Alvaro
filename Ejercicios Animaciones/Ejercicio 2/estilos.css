@@ -1,0 +1,12 @@
+.contenedor{
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(139, 255, 240);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px dotted black;
+}

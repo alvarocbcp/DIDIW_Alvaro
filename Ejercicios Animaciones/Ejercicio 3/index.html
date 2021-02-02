@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <style>
+        .contenedor{
+            width: 100%;
+            max-width: 450px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(219, 158, 255);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .contenedor h1{
+            font-weight: 100;
+        }
+        .contenedor p{
+            font-size: 20px;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+
+            animacion();
+        });
+
+        function animacion(){
+            var btn1 = document.querySelector('.btn1');
+            var btn2 = document.querySelector('.btn2');
+            var cont = document.querySelector('.contenedor');
+
+            btn1.addEventListener('click', ()=>{
+                fadeIn(cont, 1000);
+            });
+
+            btn2.addEventListener('click', ()=>{
+                fadeOut(cont, 1000);
+            });
+
+            function fadeIn(cont, duracion){
+                cont.style.transition = `${duracion/1000}s`;
+                cont.style.opacity = 1;
+            }
+
+            function fadeOut(cont, duracion){
+                cont.style.transition = `${duracion/1000}s`;
+                cont.style.opacity = 0;
+            }
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Efectos FadeIn y FadeOut</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In est non, repellendus cum quaerat voluptas perspiciatis iste rerum perferendis blanditiis?</p>
+    </div>
+    <button class="btn1">Fade In</button>
+    <button class="btn2">Fade Out</button>
+</body>
+</html>
