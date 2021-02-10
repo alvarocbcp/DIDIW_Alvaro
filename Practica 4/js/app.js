@@ -1,3 +1,8 @@
+//Imports de otros ficheros js
+import { actualizar as actualizarSnake, dibujar as dibujarSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection } from './snake.js';
+import { actualizar as actualizarApple, dibujar as dibujarApple } from './apple.js';
+import { outsideGrid } from './grid.js';
+
 document.addEventListener('DOMContentLoaded',()=>{
     console.log("DOM cargado");
     aplicacion();
@@ -31,21 +36,42 @@ function aplicacion(){
     }
 
     customElements.define('elemento-introduccion', ElementoIntroduccion);
+    
 
-    class ElementoJuego extends HTMLElement{
-        constructor(){
-            super();
+    //Funciones juego
+    let lastRenderTime = 0;
+    let gameOver = false;
+    const tablero = document.getElementById('tablero');
 
-            this.attachShadow({mode : "open"});
-
-            this.templateJuego = document.querySelector("#juego");
-            this.juego = document.importNode(this.templateJuego.content, true);
+    function principal(currentTime){
+        if(gameOver){
+            return
         }
-
-        connectedCallback(){
-            this.shadowRoot.appendChild(this.juego);
-        }
+        window.requestAnimationFrame(principal);
+        const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
+        if(secondsSinceLastRender < 1 / SNAKE_SPEED) return;
+        console.log("Render");
+        lastRenderTime = currentTime;  
+        
+        actualizar();
+        dibujar();
     }
 
-    customElements.define('elemento-juego', ElementoJuego);
+    window.requestAnimationFrame(principal);
+
+    function actualizar(){
+        actualizarSnake();
+        actualizarApple();
+        checkMuerte();
+    }
+
+    function dibujar(){
+        tablero.innerHTML = '';
+        dibujarSnake(tablero);
+        dibujarApple(tablero);
+    }
+
+    function checkMuerte(){
+        gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+    }
 }
