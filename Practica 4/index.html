@@ -4,10 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 4</title>
-    <link rel="stylesheet" href="css/estilos.css">
     <script src="js/app.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    <my-custom-element></my-custom-element>
+    
+    <!--Template introduccion-->
+    <template id="intro">
+        <link rel="stylesheet" href="css/estilosIntro.css">
+        <div class="container-instrucciones">
+            <div class="titulo hijo-instrucciones">
+                <h2>SNAKE</h2>
+            </div>
+            <div class="controles hijo-instrucciones">
+                <ul>
+                    <li><p>Mover Izquierda: Flecha izquierda</p></li>
+                    <li><p>Mover Derecha: Flecha derecha</p></li>
+                    <li><p>Mover Arriba: Flecha arriba</p></li>
+                    <li><p>Mover Abajo: Flecha abajo</p></li>
+                    <li><p>Pausar: Escape</p></li>
+                </ul>
+            </div>
+            <div class="boton-start hijo-instrucciones">
+                <p>¡START!</p>
+            </div>
+
+        </div>
+    </template>
+
+    <!--Template juego-->
+    <template id="juego">
+        <link rel="stylesheet" href="css/estilosJuego.css">
+        <div class="container-juego">
+            <div class="cabecera">
+                <ul>
+                    <li><p>Tiempo: </p><span id="tiempo">0</span></li>
+                    <li><p>Puntos: </p><span id="puntos">0</span></li>
+                </ul>
+            </div>
+            <div class="grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </template>
+
+    <elemento-introduccion></elemento-introduccion>
+    <elemento-juego></elemento-juego>
+
 </body>
 </html>
