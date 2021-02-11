@@ -2,7 +2,7 @@ import { onSnake, expandSnake } from './snake.js';
 import { randomGridPosition } from './grid.js';
 
 let apple = getRandomApplePosition();
-const EXPANSION_RATE = 3;
+const EXPANSION_RATE = 2;
 
 export function actualizar(){
     if(onSnake(apple)){

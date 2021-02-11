@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 function aplicacion(){
 
+    var juego = document.querySelector(".container-juego");
+
     class ElementoIntroduccion extends HTMLElement{
         constructor(){
             super();
@@ -24,7 +26,8 @@ function aplicacion(){
 
         connectedCallback(){
             this.shadowRoot.appendChild(this.instrucciones);
-            this.shadowRoot.querySelector(".boton-start").addEventListener('click', ()=>{
+            var start = this.shadowRoot.querySelector(".boton-start");
+            start.addEventListener('click', ()=>{
                 this.empezar();
             })
         }
@@ -43,35 +46,52 @@ function aplicacion(){
     let gameOver = false;
     const tablero = document.getElementById('tablero');
 
-    function principal(currentTime){
-        if(gameOver){
-            return
+    document.addEventListener('keydown', e=>{
+        switch(e.key){
+            case 'ArrowUp':
+                break
+            case 'ArrowDown':
+                break
+            case 'ArrowLeft':
+                break
+            case 'ArrowRight':
+                break
+            default:
+                function principal(currentTime){
+                    if(gameOver){
+                        return
+                    }
+                    window.requestAnimationFrame(principal);
+                    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
+                    if(secondsSinceLastRender < 1 / SNAKE_SPEED) return;
+                    console.log("Render");
+                    lastRenderTime = currentTime;  
+                    
+                    actualizar();
+                    dibujar();
+                }
+            
+                window.requestAnimationFrame(principal);
+            
+                function actualizar(){
+                    actualizarSnake();
+                    actualizarApple();
+                    checkMuerte();
+                }
+            
+                function dibujar(){
+                    tablero.innerHTML = '';
+                    dibujarSnake(tablero);
+                    dibujarApple(tablero);
+                }
+            
+                function checkMuerte(){
+                    gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+                }
         }
-        window.requestAnimationFrame(principal);
-        const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
-        if(secondsSinceLastRender < 1 / SNAKE_SPEED) return;
-        console.log("Render");
-        lastRenderTime = currentTime;  
         
-        actualizar();
-        dibujar();
-    }
+    })
+    
 
-    window.requestAnimationFrame(principal);
-
-    function actualizar(){
-        actualizarSnake();
-        actualizarApple();
-        checkMuerte();
-    }
-
-    function dibujar(){
-        tablero.innerHTML = '';
-        dibujarSnake(tablero);
-        dibujarApple(tablero);
-    }
-
-    function checkMuerte(){
-        gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
-    }
+    
 }
