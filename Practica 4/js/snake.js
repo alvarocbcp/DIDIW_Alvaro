@@ -4,7 +4,7 @@ export const SNAKE_SPEED = 5;
 const snakeBody = [{ x:11, y:11}];
 let nuevosSegmentos = 0;
 
-export function actualizar(){
+export function actualizarSnake(){
     addSegmentos();
     const inputDirection = getInputDirection();
     for (let i = snakeBody.length - 2; i >= 0; i--){
@@ -15,7 +15,7 @@ export function actualizar(){
     snakeBody[0].y += inputDirection.y;
 }
 
-export function dibujar(tablero){
+export function dibujarSnake(tablero){
     snakeBody.forEach(segmento => {
         const snakeElement = document.createElement('div');
         snakeElement.style.gridRowStart = segmento.y;

@@ -4,14 +4,14 @@ import { randomGridPosition } from './grid.js';
 let apple = getRandomApplePosition();
 const EXPANSION_RATE = 2;
 
-export function actualizar(){
+export function actualizarApple(){
     if(onSnake(apple)){
         expandSnake(EXPANSION_RATE);
         apple = getRandomApplePosition();
     }
 }
 
-export function dibujar(tablero){
+export function dibujarApple(tablero){
     const appleElement = document.createElement('div');
     appleElement.style.gridRowStart = apple.y;
     appleElement.style.gridColumnStart = apple.x;

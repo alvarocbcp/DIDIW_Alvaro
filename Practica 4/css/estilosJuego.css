@@ -16,8 +16,8 @@
 
 .cabecera{
     margin-top: 40px;
-    width: 500px;
-    background-color: blue;
+    width: 80vmin;
+    background-color: #CCC;
 }
 
 .cabecera ul{
@@ -25,9 +25,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem;
 }
 
 .cabecera ul li p{
+    font-size: 1.5rem;
     display: inline;
 }
 
@@ -41,12 +43,19 @@
     grid-template-columns: repeat(21, 1fr);
 }
 
+.snakeHead{
+    background-image: url(../img/snakeHead.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .snake {
     background-color: rgb(157, 247, 157);
     border: .25vmin solid black;
 }
   
 .apple {
-    background-color: rgb(255, 31, 31);
-    border: .25vmin solid black;
+    background-image: url(../img/apple.png);
+    background-repeat: no-repeat;
+    background-size: contain;
  }
