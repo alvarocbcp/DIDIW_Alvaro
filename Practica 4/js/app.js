@@ -5,7 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function aplicacion() {
 
-    var juego = document.querySelector(".container-juego");
+    // CONSTANTES Y VARIABLES
+
+    let GRID_SIZE = 21;                                     //Tamaño del grid, al ser cuadrado nos sirve con tener un solo lado
+    const tablero = document.getElementById('tablero');     //Tablero (div) principal del html que contiene la propiedad display: grid;
+    const contenedorJuego = document.querySelector(".container-juego");
+
+
+    let snakeBody = [{ x: 11, y: 11 }];                     //Cuerpo de la serpiente. Empieza siendo solo la cabeza en la posicion central del tablero
+    let SNAKE_SPEED = 5;                                    //Velocidad a la que se mueve la serpiente, va en relacion con el requestAnimationFrame y este hace que se ejecute a distintas velocidades
+    let EXPANSION_RATE = 1;                                 //Numero de cuadrados que se expande la serpiente cuando come
+    let lastRenderTime = 0;                                 //Variable usada en el requestAnimationFrame
+    let gameOver = false;                                   //Variable que hace junto a la funcion checkMuerte() cuando se acaba la partida
+    let nuevosSegmentos = 0;                                //Nuevos segmentos que se añaden a la serpiente cuando come una manzana
+    let apple = getRandomApplePosition();                   //Creacion de una manzana de forma aleatoria en el tablero
+    let inputDirection = { x: 0, y: 0 };                    //Variable que indica la direccion hacia donde se mueve la serpiente
+    let lastInputDirection = { x: 0, y: 0 };                //Variable que indica la ultima direccion hacia donde se movia la serpiente (sirve para no poder girar 180º)
+    let contadorTiempo = 0;                                 //Segundos que dura la partida
+    let contadorPuntos = 0;                                 //Puntos totales de la partida
+
+    //Creacion custom element pantalla inicial
 
     class ElementoIntroduccion extends HTMLElement {
         constructor() {
@@ -21,6 +40,30 @@ function aplicacion() {
 
         connectedCallback() {
             this.shadowRoot.appendChild(this.instrucciones);
+            this.shadowRoot.querySelector(".facil").addEventListener('click', () => {
+                SNAKE_SPEED = 5;
+                EXPANSION_RATE = 1;
+                GRID_SIZE = 21;
+                snakeBody = [{ x: Math.round(GRID_SIZE/2), y: Math.round(GRID_SIZE/2) }];
+                tablero.style.gridTemplateColumns = "repeat(" + GRID_SIZE + ", 1fr)";
+                tablero.style.gridTemplateRows = "repeat(" + GRID_SIZE + ", 1fr)";
+            });
+            this.shadowRoot.querySelector(".intermedio").addEventListener('click', () => {
+                SNAKE_SPEED = 15;
+                EXPANSION_RATE = 1;
+                GRID_SIZE = 41;
+                snakeBody = [{ x: Math.round(GRID_SIZE/2), y: Math.round(GRID_SIZE/2) }];
+                tablero.style.gridTemplateColumns = "repeat(" + GRID_SIZE + ", 1fr)";
+                tablero.style.gridTemplateRows = "repeat(" + GRID_SIZE + ", 1fr)";
+            });
+            this.shadowRoot.querySelector(".dificil").addEventListener('click', () => {
+                SNAKE_SPEED = 20;
+                EXPANSION_RATE = 2;
+                GRID_SIZE = 61;
+                snakeBody = [{ x: Math.round(GRID_SIZE/2), y: Math.round(GRID_SIZE/2) }];
+                tablero.style.gridTemplateColumns = "repeat(" + GRID_SIZE + ", 1fr)";
+                tablero.style.gridTemplateRows = "repeat(" + GRID_SIZE + ", 1fr)";
+            });
             var start = this.shadowRoot.querySelector(".boton-start");
             start.addEventListener('click', () => {
                 this.empezar();
@@ -30,97 +73,61 @@ function aplicacion() {
         empezar() {
             var botonEmpezar = this.shadowRoot.querySelector(".boton-start");
             this.shadowRoot.querySelector(".container-instrucciones").style.display = "none";
+            contadorTiempoFuncion();
         }
     }
 
     customElements.define('elemento-introduccion', ElementoIntroduccion);
 
-    //CABECERA JUEGO
-    //CONSTANTES Y VALIABLES
-
-
-
-
-
-
     //TABLERO DE JUEGO
-    // CONSTANTES Y VARIABLES
 
-    const GRID_SIZE = 21;                                   //Tamaño del grid, al ser cuadrado nos sirve con tener un solo lado
-    const tablero = document.getElementById('tablero');     //Tablero (div) principal del html que contiene la propiedad display: grid;
-    const SNAKE_SPEED = 5;                                  //Velocidad a la que se mueve la serpiente, va en relacion con el requestAnimationFrame y este hace que se ejecute a distintas velocidades
-    const snakeBody = [{ x: 11, y: 11 }];                   //Cuerpo de la serpiente. Empieza siendo solo la cabeza en la posicion central del tablero
-    const EXPANSION_RATE = 1;                               //Numero de cuadrados que se expande la serpiente cuando come
-    const contenedorJuego = document.querySelector(".container-juego");
-
-    let lastRenderTime = 0;                                 //Variable usada en el requestAnimationFrame
-    let gameOver = false;                                   //Variable que hace junto a la funcion checkMuerte() cuando se acaba la partida
-    let nuevosSegmentos = 0;                                //Nuevos segmentos que se añaden a la serpiente cuando come una manzana
-    let apple = getRandomApplePosition();                   //Creacion de una manzana de forma aleatoria en el tablero
-    let inputDirection = { x: 0, y: 0 };                    //Variable que indica la direccion hacia donde se mueve la serpiente
-    let lastInputDirection = { x: 0, y: 0 };                //Variable que indica la ultima direccion hacia donde se movia la serpiente (sirve para no poder girar 180º)
-    let contadorTiempo = 0;                                 //Segundos que dura la partida
-    let contadorPuntos = 0;                                 //Puntos totales de la partida
 
     //Evento para iniciar la funcion principal del juego cuando se pulsa una tecla que no sea ninguna de las flechas
-    var eventoPrincipal = document.addEventListener('keydown', e => {
-        switch (e.key) {
-            case 'ArrowUp':
-                break
-            case 'ArrowDown':
-                break
-            case 'ArrowLeft':
-                break
-            case 'ArrowRight':
-                break
-            default:
-                //Funcion principal del programa, ejecuta de continuo teniendo en cuenta la velocidad de la serpiente las funciones de actualizar y dibujar tanto la serpiente como la manzana
-                function principal(currentTime) {
-                    if (gameOver) {
-                        setTimeout(gameOverFuncion, 1000);
-                    }
-                    else {
-                        window.requestAnimationFrame(principal);
-                        const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
-                        if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
-                        console.log("Render");
-                        lastRenderTime = currentTime;
 
-                        actualizar();
-                        dibujar();
-                    }
-                    
+    //Funcion principal del programa, ejecuta de continuo teniendo en cuenta la velocidad de la serpiente las funciones de actualizar y dibujar tanto la serpiente como la manzana
+    function principal(currentTime) {
+        if (gameOver) {setTimeout(gameOverFuncion, 1000)}
+        else {
+            window.requestAnimationFrame(principal);
+            const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
+            if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
+            console.log("Render");
+            lastRenderTime = currentTime;
 
-                }
-
-                setInterval(function () {
-                    contadorTiempo++;;
-                    document.getElementById("tiempo").innerHTML = contadorTiempo;
-                }, 1000);
-
-                window.requestAnimationFrame(principal);
-
-                //Funcion para actualizar los datos del programa
-                function actualizar() {
-                    actualizarSnake();
-                    actualizarApple();
-                    checkMuerte();
-                }
-
-                //Funcion para dibujar sobre el tablero los datos del programa
-                function dibujar() {
-                    tablero.innerHTML = '';
-                    dibujarSnake(tablero);
-                    dibujarApple(tablero);
-                }
-
-                //Funcion para ver si la serpiente ha colisionado y finalizar el programa gracias a la variable booleana gameOver
-                function checkMuerte() {
-                    gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
-                }
+            actualizar();
+            dibujar();
         }
+    }
 
-    })
+    function contadorTiempoFuncion() {
+        setInterval(function () {
+            contadorTiempo++;;
+            document.getElementById("tiempo").innerHTML = contadorTiempo;
+        }, 1000);
+    }
+
+
+    window.requestAnimationFrame(principal);
+
+    //Funcion para actualizar los datos del programa
+    function actualizar() {
+        actualizarSnake();
+        actualizarApple();
+        checkMuerte();
+    }
+
+    //Funcion para dibujar sobre el tablero los datos del programa
+    function dibujar() {
+        tablero.innerHTML = '';
+        dibujarSnake(tablero);
+        dibujarApple(tablero);
+    }
+
+    //Funcion para ver si la serpiente ha colisionado y finalizar el programa gracias a la variable booleana gameOver
+    function checkMuerte() {
+        gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
+    }
+
 
     // FUNCIONES SNAKE
 
@@ -149,8 +156,14 @@ function aplicacion() {
 
     //Expande la serpiente cuando come una manzana
     function expandSnake(cantidad) {
-        nuevosSegmentos += cantidad;
-        contadorPuntos++;
+        if(contadorPuntos%10 === 0 && contadorPuntos !== 0){
+            nuevosSegmentos += (cantidad*2);
+            contadorPuntos = contadorPuntos + 3;
+        }
+        else{
+            nuevosSegmentos += cantidad;
+            contadorPuntos++;
+        }
         document.getElementById("puntos").innerHTML = contadorPuntos;
     }
 
@@ -198,12 +211,20 @@ function aplicacion() {
 
     //Dibuja la manzana en el tablero
     function dibujarApple(tablero) {
-        const appleElement = document.createElement('div');
-        appleElement.style.gridRowStart = apple.y;
-        appleElement.style.gridColumnStart = apple.x;
-        appleElement.classList.add('apple');
-        tablero.appendChild(appleElement);
-
+        if(contadorPuntos%10 === 0 && contadorPuntos !== 0){
+            const appleElement = document.createElement('div');
+            appleElement.style.gridRowStart = apple.y;
+            appleElement.style.gridColumnStart = apple.x;
+            appleElement.classList.add('appleDorada');
+            tablero.appendChild(appleElement);
+        }
+        else{
+            const appleElement = document.createElement('div');
+            appleElement.style.gridRowStart = apple.y;
+            appleElement.style.gridColumnStart = apple.x;
+            appleElement.classList.add('apple');
+            tablero.appendChild(appleElement);
+        }
     }
 
     //Devuelve una posicion aleatoria para colocar la manzana en un sitio vacío del tablero
@@ -289,8 +310,8 @@ function aplicacion() {
                 let titulo = this.shadowRoot.querySelector(".titulo-gameOver");
 
                 let contador = 25;
-                let intervalo = setInterval(()=>{
-                    if(contador == 0){
+                let intervalo = setInterval(() => {
+                    if (contador == 0) {
                         clearInterval(intervalo);
                     }
                     contador--;
@@ -304,7 +325,7 @@ function aplicacion() {
         window.customElements.define('elemento-gameover', ElementoGameOver);
 
         //Funcion para volver a la pantalla principal del programa
-        function salir(){
+        function salir() {
             location.reload();
         }
 

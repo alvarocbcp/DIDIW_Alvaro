@@ -126,6 +126,21 @@
     width: 100%;
 }
 
+.dificultad{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dificultad div{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+    background-color: lightcoral;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
 .boton-start{
     font-size: 4rem;
     cursor: pointer;
