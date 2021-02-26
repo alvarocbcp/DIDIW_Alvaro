@@ -318,6 +318,11 @@ header .buscador::placeholder{
 
 /*MAIN slider automatico*/
 
+.audio{
+    width: max-content;
+    margin: 1em auto 0;
+}
+
 .slider{
     width: 80%;
     height: 220px;
@@ -389,6 +394,18 @@ header .buscador::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.container .videos{
+    margin: 1em auto 0;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+iframe{
+    margin-left:1em;
 }
 
 .container .imgs-pag-principal{
