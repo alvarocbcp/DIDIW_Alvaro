@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Practica 3</title>
+    <title>Practicas 5-6</title>
 </head>
 <body>
     <input type="checkbox" id="btn-menu">
@@ -16,7 +16,15 @@
     <input type="checkbox" id="Niño">
     <header>
 
-        <a href="#" class="icon-paper-plane hijo-header"></a>
+        <div class="logo">
+            <!-- No se como se usa el atruibuto sizes -->
+            <picture class="hijo-header">
+                <source media="(min-width:1024px)" srcset="imgs/LOGO-ACB-1000.jpg">
+                <source media="(min-width:768px)" srcset="imgs/LOGO-ACB-600.jpg">
+                <source media="(max-width:768px" srcset="imgs/LOGO-ACB-200.jpg">
+                <img src="imgs/LOGO-ACB-1200.jpg" alt="Logo">
+            </picture>
+        </div>
         <h1 class="hijo-header">CABELLO'S WEAR</h1>
         <nav class="hijo-header">
             <a href="#">Hombre</a>
@@ -92,10 +100,10 @@
         
         <div class="slider">
             <ul>
-                <li><img src="imgs/slider1.jpg" alt=""></li>
-                <li><img src="imgs/slider2.jpg" alt=""></li>
-                <li><img src="imgs/slider3.jpg" alt=""></li>
-                <li><img src="imgs/slider4.jpg" alt=""></li>
+                <li><img src="imgs/slider1.jpg" alt="Slider1"></li>
+                <li><img src="imgs/slider2.jpg" alt="Slider2"></li>
+                <li><img src="imgs/slider3.jpg" alt="Slider3"></li>
+                <li><img src="imgs/slider4.jpg" alt="Slider4"></li>
             </ul>
         </div>
 
@@ -111,12 +119,15 @@
            
     
             <h1 class="nueva-coleccion">NUEVA COLECCIÓN</h1>
+
+            <!-- Correccion de accesibilidad: he incluido texto alternativo en las imagenes que no lo tenian 
+            Error: 1.1.1 Non-text Content -->
     
             <div class="imgs-pag-principal">
                 <ul>
-                    <li><a href="#"><img src="imgs/img1.jpg" alt=""></a><p>FAKE LOVE HOODIE <br>~ 24,95€</p></li>
-                    <li><a href="#"><img src="imgs/img2.jpg" alt=""></a><p>BOOSY PANTS <br>~ 19,95€</p></li>
-                    <li><a href="#"><img src="imgs/img3.jpg" alt=""></a><p>RUNAWAY <br>~ 14,95€</p></li>
+                    <li><a href="#"><img src="imgs/img1.jpg" alt="Imagen1"></a><p>FAKE LOVE HOODIE <br>~ 24,95€</p></li>
+                    <li><a href="#"><img src="imgs/img2.jpg" alt="Imagen2"></a><p>BOOSY PANTS <br>~ 19,95€</p></li>
+                    <li><a href="#"><img src="imgs/img3.jpg" alt="Imagen3"></a><p>RUNAWAY <br>~ 14,95€</p></li>
                 </ul>
             </div>
     
@@ -124,9 +135,9 @@
 
             <div class="imgs-pag-principal">
                 <ul>
-                    <li><a href="#"><img src="imgs/img4.jpg" alt=""></a><p>FAKE LOVE T-SHIRT <br>~ 28€</p></li>
-                    <li><a href="#"><img src="imgs/img5.jpg" alt=""></a><p>ICONIC T-SHIRT <br>~ 24,95€</p></li>
-                    <li><a href="#"><img src="imgs/img6.jpg" alt=""></a><p>LONELY T-SHIRT <br>~ 24,95€</p></li>
+                    <li><a href="#"><img src="imgs/img4.jpg" alt="Imagen4"></a><p>FAKE LOVE T-SHIRT <br>~ 28€</p></li>
+                    <li><a href="#"><img src="imgs/img5.jpg" alt="Imagen5"></a><p>ICONIC T-SHIRT <br>~ 24,95€</p></li>
+                    <li><a href="#"><img src="imgs/img6.jpg" alt="Imagen6"></a><p>LONELY T-SHIRT <br>~ 24,95€</p></li>
                 </ul>
             </div>
         </div>
