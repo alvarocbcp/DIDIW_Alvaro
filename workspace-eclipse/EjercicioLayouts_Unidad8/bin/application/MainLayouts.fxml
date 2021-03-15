@@ -2,20 +2,48 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane prefHeight="500.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<BorderPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #336699;" BorderPane.alignment="CENTER">
+      <HBox prefHeight="30.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #336699;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Current" />
             <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Rejected" />
+            <StackPane prefHeight="150.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#86a4bf99" height="30.0" stroke="BLACK" strokeType="INSIDE" width="30.0" StackPane.alignment="CENTER_RIGHT" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="?" StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets right="7.0" />
+                     </StackPane.margin>
+                  </Text>
+               </children>
+            </StackPane>
          </children>
          <padding>
             <Insets bottom="15.0" left="12.0" right="12.0" top="15.0" />
@@ -23,7 +51,7 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="440.0" prefWidth="149.0" spacing="8.0" BorderPane.alignment="CENTER">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
@@ -56,4 +84,78 @@
          </children>
       </VBox>
    </left>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="212.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="391.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Label text="Name">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Password" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Date of birth" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Gender" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Technologies" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Qualifications" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Location" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField GridPane.columnIndex="1" />
+            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Male" StackPane.alignment="CENTER_LEFT" />
+                  <RadioButton mnemonicParsing="false" text="Female" StackPane.alignment="CENTER" />
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="Java" StackPane.alignment="CENTER_LEFT" />
+                  <CheckBox mnemonicParsing="false" text="Electron" StackPane.alignment="CENTER" />
+               </children>
+            </StackPane>
+            <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </center>
 </BorderPane>
