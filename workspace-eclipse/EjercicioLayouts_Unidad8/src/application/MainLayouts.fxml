@@ -141,20 +141,20 @@
             <TextField GridPane.columnIndex="1" />
             <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <DatePicker prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <RadioButton mnemonicParsing="false" text="Male" StackPane.alignment="CENTER_LEFT" />
-                  <RadioButton mnemonicParsing="false" text="Female" StackPane.alignment="CENTER" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <children>
-                  <CheckBox mnemonicParsing="false" text="Java" StackPane.alignment="CENTER_LEFT" />
-                  <CheckBox mnemonicParsing="false" text="Electron" StackPane.alignment="CENTER" />
-               </children>
-            </StackPane>
             <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="110.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Male" />
+                  <RadioButton mnemonicParsing="false" text="Female" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="114.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="Java" />
+                  <CheckBox mnemonicParsing="false" text="Electron" />
+               </children>
+            </HBox>
          </children>
       </GridPane>
    </center>
