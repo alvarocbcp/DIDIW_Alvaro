@@ -11,6 +11,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -145,8 +146,11 @@
             <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="110.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <RadioButton mnemonicParsing="false" text="Male" />
-                  <RadioButton mnemonicParsing="false" text="Female" />
+                  <RadioButton mnemonicParsing="false" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genero" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Female" toggleGroup="$genero" />
                </children>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="114.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
