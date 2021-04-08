@@ -9,4 +9,10 @@
     <fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
     <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
     <fullyQualifiedTypeName name="javafx.scene.control.cell.ComboBoxListCell"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.TreeView"/>
+    <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.TreeItem"/>
+    <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.cell.TextFieldTreeCell"/>
 </qualifiedTypeNameHistroy>
