@@ -1,0 +1,16 @@
+FlowPane{
+	/*PROPERTIES */
+	-fx-row-valignment: top;
+	-fx-column-halignment: right;
+	-fx-alignment: center;
+	-fx-orientation: vertical;
+	
+	/*LAYOUT */
+	-fx-hgap: 20;
+	-fx-vgap: 20;
+}
+
+#Boton1{
+	-fx-padding: 18;
+	-fx-margin-
+}
