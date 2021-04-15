@@ -1,8 +1,8 @@
 FlowPane{
 	/*PROPERTIES */
-	-fx-row-valignment: top;
+	-fx-row-valignment: center;
 	-fx-column-halignment: right;
-	-fx-alignment: center;
+	-fx-alignment: center ;
 	-fx-orientation: vertical;
 	
 	/*LAYOUT */
@@ -12,5 +12,10 @@ FlowPane{
 
 #Boton1{
 	-fx-padding: 18;
-	-fx-margin-
+}
+
+#Boton2{
+	-fx-background-radius: 0;
+	-fx-border-color: #f4f4f4;
+	-fx-padding: 3px;
 }

@@ -1,0 +1,21 @@
+FlowPane{
+	/*PROPERTIES */
+	-fx-row-valignment: bottom;
+	-fx-column-halignment: right;
+	-fx-alignment: center ;
+	-fx-orientation: horizontal;
+	
+	/*LAYOUT */
+	-fx-hgap: 20;
+	-fx-vgap: 20;
+}
+
+#Boton1{
+	-fx-padding: 18;
+}
+
+#Boton2{
+	-fx-background-radius: 0;
+	-fx-border-color: #f4f4f4;
+	-fx-padding: 3px;
+}
