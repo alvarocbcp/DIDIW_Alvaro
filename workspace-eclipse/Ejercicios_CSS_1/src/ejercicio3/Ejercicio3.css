@@ -1,0 +1,8 @@
+#borderpane{
+	-fx-background-color: #47FFBA;
+}
+
+#barra-izq{
+	-fx-border-color: green lightgreen red lightgreen;
+	-fx-border-insets: 1em;
+}
