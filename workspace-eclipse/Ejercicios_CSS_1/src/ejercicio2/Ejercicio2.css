@@ -1,7 +1,52 @@
-BorderPane{
-	
+#cabecera{
+	-fx-background-color: #008C5F;
 }
 
-#cabecera{
-	-fx-background-color: #00965E;
+#hbox-cabecera{
+	-fx-background-color: #009CBD;
+	-fx-background-radius: 15px;
+	-fx-spacing: 400px;
+}
+
+.text-cabecera{
+	-fx-text-fill: white;
+}
+
+#app-header{
+	-fx-font-size: 2em;
+}
+
+#account{
+	-fx-font-size: 1.5em;
+	-fx-background-image: url("../../img/javafx_account_example.jpg");
+	-fx-background-repeat: no-repeat;
+}
+
+#vbox-left{
+	-fx-border-width: 1px;
+	-fx-border-color: transparent lightgray transparent transparent;
+}
+
+.item-menu{
+	-fx-border-width: 1px;
+	-fx-border-color: transparent transparent lightgray transparent;
+	-fx-padding: 1.5em;
+	-fx-font-size: 1.5em;
+}
+
+#anch-bottom{
+	-fx-border-width: 1px;
+	-fx-border-color: lightgray transparent transparent transparent;
+}
+
+#coyyright{
+	-fx-font-size: 1.2em;
+}
+
+#content-header{
+	-fx-font-weight: bold;
+}
+
+.contenido{
+	-fx-font-size: 1.8em;
 }
