@@ -1,8 +1,130 @@
 #borderpane{
-	-fx-background-color: #47FFBA;
+	-fx-background-color: #8fbc8f;
+}
+
+#cabecera{
+	-fx-background-color: #336699;
+	-fx-padding: 15 12 15 12;
+    -fx-spacing: 10;
+    -fx-pref-height: 60;
+}
+
+#cabecera .my-stack{
+	-fx-alignment: center-right;
+}
+
+#cabecera .my-stack Rectangle{
+	-fx-fill: #b0c6d9;
 }
 
 #barra-izq{
-	-fx-border-color: green lightgreen red lightgreen;
-	-fx-border-insets: 1em;
+	-fx-border-color: #2e8b57, red;
+    -fx-border-width: 2px;
+    -fx-padding: 10;
+    -fx-spacing: 8;
+    -fx-border-insets: 8 8 0 8, 12 12 4 12;
+    
+    /* Imagen de fondo centrada horizontalmente  */
+    -fx-background-image: url("../../img/arrow_t_up_right.png");
+    -fx-background-size: 100;
+    -fx-background-position: center top;
+    -fx-background-repeat: no-repeat;
+}
+
+#barra-izq Text{
+	-fx-font: Bold 14px "Arial";
+}
+
+#barra-izq Hyperlink{
+	-fx-text-fill: red;
+}
+
+#izquierda .tree-cell:expanded{
+	-fx-font-weight: bold;
+}
+
+#barra-izq .tree-cell:collapsed{
+	-fx-font-style: italic;
+}
+
+
+.grid-central {
+    -fx-background-color: lightblue;
+    -fx-background-radius: 10;
+    -fx-background-insets: 8 8 0 0;
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.grid-central .list-cell:even:selected { /* Filas pares del ListView */
+	-fx-background-color: blue;
+	-fx-opacity: 0.5;
+	-fx-text-fill: white;
+}
+
+.grid-central .list-cell:odd:selected { /* Filas impares del ListView */
+	-fx-background-color: red;
+	-fx-opacity: 0.5;
+	-fx-text-fill: white;
+}
+
+.grid-central RadioButton:selected, .grid-central CheckBox:selected{
+	-fx-border-width: 3px;
+	-fx-border-color: red;
+}
+
+#barra-dcha{
+	-fx-border-color: transparent;
+	-fx-border-insets: 8 0 0 0;
+}
+
+#barra-dcha Accordion{
+	-fx-pref-height: 200;
+}
+
+#barra-dcha TitledPane{
+	-fx-collapsible: true;	
+	-fx-animated: true;
+}
+
+#barra-dcha TitledPane:expanded {
+	-fx-font-style: italic;
+}
+
+#barra-dcha TitledPane:expanded AnchorPane{
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: contain;
+	-fx-rotate: 30deg;
+}
+
+#barra-dcha #image1:expanded AnchorPane{
+	-fx-background-image: url("../../img/Img1.PNG");	
+}
+
+#barra-dcha #image2:expanded AnchorPane{
+	-fx-background-image: url("../../img/Img2.PNG");
+}
+
+#barra-dcha #image3:expanded AnchorPane{
+	-fx-background-image: url("../../img/Img3.PNG");
+}
+
+#barra-dcha #image4:expanded AnchorPane{
+	-fx-background-image: url("../../img/Img4.PNG");
+}
+
+/* Degradado en el fondo del pie de página */
+#pie{
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #dc143c, #32cd32);
+	-fx-background-insets: 5 0 0 0;
+}
+
+/* Ítems del pie de página */
+.flow-pie Slider{
+	-fx-show-tick-labels: true;	 
+	-fx-show-tick-marks: true;	 
+	-fx-major-tick-unit: 2;	 
+	-fx-minor-tick-count: 1;
+	-fx-block-increment: 1;
 }
