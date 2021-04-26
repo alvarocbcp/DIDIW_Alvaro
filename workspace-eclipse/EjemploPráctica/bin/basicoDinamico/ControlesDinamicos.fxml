@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane minHeight="600.0" minWidth="550.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="basicoDinamico.ListController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="89.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label text="ChoiceBox">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <ChoiceBox fx:id="choice1" prefWidth="150.0" GridPane.columnIndex="1" />
+      <ListView fx:id="list1" editable="true" fixedCellSize="30.0" maxWidth="350.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin>
+      </ListView>
+      <Label text="ListView" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="ComboBox" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="combo1" editable="true" prefHeight="25.0" prefWidth="163.0" promptText="Seleccione un valor..." visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="TableView" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="table1" fixedCellSize="30.0" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <columns>
+            <TableColumn fx:id="firstNameCol" prefWidth="75.0" text="First name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="112.0" text="Last name" />
+            <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="105.0" text="Email" />
+            <TableColumn fx:id="ageColumn" prefWidth="88.0" text="Age" />
+         </columns>
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin>
+      </TableView>
+      <TreeView fx:id="tree1" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin>
+      </TreeView>
+      <Label text="Tree View" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+   </children>
+</GridPane>
