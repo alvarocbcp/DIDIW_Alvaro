@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="javafx.scene.control.Separator"/>
     <fullyQualifiedTypeName name="javafx.scene.control.ListView"/>
     <fullyQualifiedTypeName name="javafx.scene.control.ComboBox"/>
-    <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
     <fullyQualifiedTypeName name="javafx.scene.control.cell.ComboBoxListCell"/>
     <fullyQualifiedTypeName name="javafx.scene.control.TreeView"/>
     <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
@@ -14,7 +13,20 @@
     <fullyQualifiedTypeName name="javafx.scene.control.TreeItem"/>
     <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
     <fullyQualifiedTypeName name="javafx.scene.control.cell.TextFieldTreeCell"/>
-    <fullyQualifiedTypeName name="javafx.scene.layout.BorderPane"/>
     <fullyQualifiedTypeName name="javafx.beans.property.SimpleStringProperty"/>
     <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.GridPane"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.BorderPane"/>
+    <fullyQualifiedTypeName name="java.util.Observable"/>
+    <fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
+    <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.cell.PropertyValueFactory"/>
+    <fullyQualifiedTypeName name="javafx.beans.property.SimpleIntegerProperty"/>
+    <fullyQualifiedTypeName name="application.MenuController"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.AnchorPane"/>
+    <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.RadioButton"/>
+    <fullyQualifiedTypeName name="dinamico.Socio"/>
+    <fullyQualifiedTypeName name="editar.ListController"/>
 </qualifiedTypeNameHistroy>

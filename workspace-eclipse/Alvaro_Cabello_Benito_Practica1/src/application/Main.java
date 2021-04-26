@@ -17,6 +17,9 @@ public class Main extends Application {
 			loader.setLocation(Main.class.getResource("MenuPrincipal.fxml"));
 			rootLayout = (BorderPane) loader.load();
 			
+			MenuController menuController = loader.getController();
+			menuController.setRootLayout(rootLayout);
+			
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Practica 1");

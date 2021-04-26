@@ -1,70 +1,91 @@
 package dinamico;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Socio {
 	private final SimpleStringProperty nombre;
-	private final SimpleStringProperty apellido1;
-	private final SimpleStringProperty apellido2;
+	private final SimpleStringProperty apellidos;
+	private final SimpleStringProperty DNI;
 	private final SimpleStringProperty email;
 	private final SimpleStringProperty tlfn;
-	private final SimpleStringProperty edad;
+	private final SimpleIntegerProperty edad;
+	private final SimpleStringProperty genero;
+	private final SimpleStringProperty localidad;
 	
-	public Socio(String nom, String ape1, String ape2, String email, String tlfn, String edad) {
+	public Socio(String nom, String ape, String DNI, String email, String tl, Integer ed, String genero, String localidad) {
 		this.nombre = new SimpleStringProperty(nom);
-		this.apellido1 = new SimpleStringProperty(ape1);
-		this.apellido2 = new SimpleStringProperty(ape2);
+		this.apellidos = new SimpleStringProperty(ape);
+		this.DNI = new SimpleStringProperty(DNI);
 		this.email = new SimpleStringProperty(email);
-		this.tlfn = new SimpleStringProperty(tlfn);
-		this.edad = new SimpleStringProperty(edad);
+		this.tlfn = new SimpleStringProperty(tl);
+		this.edad = new SimpleIntegerProperty(ed);
+		this.genero = new SimpleStringProperty(genero);
+		this.localidad = new SimpleStringProperty(localidad);
 	}
 	
-	public SimpleStringProperty getNombre() {
-		return nombre;
+	public String getNombre() {
+		return nombre.get();
 	}
 	
 	public void setNombre(String nom) {
         nombre.set(nom);
-    }
-
-	public SimpleStringProperty getApellido1() {
-		return apellido1;
 	}
 	
-	public void setApellido1(String ape1) {
-        apellido1.set(ape1);
-    }
-
-	public SimpleStringProperty getApellido2() {
-		return apellido2;
+	public String getApellidos() {
+		return apellidos.get();
 	}
 	
-	public void setApellido2(String ape2) {
-        apellido2.set(ape2);
-    }
+	public void setApellidos(String ape) {
+        apellidos.set(ape);
+	}
+	
+	public String getDNI() {
+		return DNI.get();
+	}
+	
+	public void setDNI(String dni) {
+        DNI.set(dni);
+	}
 
-	public SimpleStringProperty getEmail() {
-		return email;
+	public String getEmail() {
+		return email.get();
 	}
 	
 	public void setEmail(String em) {
         email.set(em);
     }
 
-	public SimpleStringProperty getTlfn() {
-		return tlfn;
+	public String getTlfn() {
+		return tlfn.get();
 	}
 	
 	public void setTelefono(String tl) {
         tlfn.set(tl);
     }
 
-	public SimpleStringProperty getEdad() {
-		return edad;
+	public Integer getEdad() {
+		return edad.get();
 	}
 	
-	public void setEdad(String ed) {
+	public void setEdad(Integer ed) {
         edad.set(ed);
     }
+	
+	public String getGenero() {
+		return genero.get();
+	}
+	
+	public void setGenero(String gen) {
+        genero.set(gen);
+	}
+	
+	public String getLocalidad() {
+		return localidad.get();
+	}
+	
+	public void setLocalidad(String loc) {
+        localidad.set(loc);
+	}
 
 }
