@@ -69,7 +69,7 @@ public class ListController {
 	}
 
 	@FXML
-	public Socio recibirDatos(ActionEvent event) {  
+	public void recibirDatos(ActionEvent event) {  
 
 		String nombre = nombreAnadir.getText();
 		String apell = apellAnadir.getText();
@@ -93,6 +93,5 @@ public class ListController {
 		}
 		
 		Socio s = new Socio(nombre, apell, dni, email, tlf, edad, genero, local);
-		return s;
 	}
 }
