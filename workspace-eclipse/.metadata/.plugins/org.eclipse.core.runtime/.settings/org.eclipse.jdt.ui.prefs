@@ -1,7 +1,7 @@
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javafx.event.EventTarget"><rhs name\="javafx.scene.control.TreeItem"/></lhs><lhs name\="javafx.scene.control.TreeItem"><rhs name\="javafx.scene.control.TreeItem"/></lhs><lhs name\="javafx.fxml.FXMLLoader"><rhs name\="javafx.fxml.FXMLLoader"/></lhs><lhs name\="javafx.util.Callback"><rhs name\="javafx.scene.control.cell.PropertyValueFactory"/></lhs></history>
-content_assist_number_of_computers=13
+content_assist_number_of_computers=14
 eclipse.preferences.version=1
-org.eclipse.jdt.ui.formatterprofiles.version=20
+org.eclipse.jdt.ui.formatterprofiles.version=21
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

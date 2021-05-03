@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Ayuda.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ayuda.ListController">
+  <panes>
+    <TitledPane animated="false" styleClass="tilted" text="Controles Básicos">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor">
+               <children>
+                  <VBox layoutX="425.0" layoutY="30.0" prefHeight="287.0" prefWidth="152.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. El botón &quot;Inicio&quot; abre un submenu para acceder a la lista de socios que existen actualmente en la base y otro para cerrarlo y volver a la pantalla principal." textAlignment="JUSTIFY" wrappingWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. El botón &quot;Editar&quot; abre una nueva pestaña con un formulario para añadir, editar o eliminar cualquier socio de la base de datos." textAlignment="JUSTIFY" wrappingWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. El botón &quot;Ayuda&quot; te redirigirá a esta ventana para poder aprender como usar la interfaz gráfica de manera correcta." textAlignment="JUSTIFY" wrappingWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="400.0" fitWidth="395.0" layoutX="14.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/PantallaPrincipal.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" styleClass="tilted" text="Controles Avanzados">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor">
+               <children>
+                  <ImageView fitHeight="263.0" fitWidth="377.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/Formulario.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="402.0" layoutY="14.0" prefHeight="301.0" prefWidth="177.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Eliminar&quot;: Para eliminar un socio de la base de datos solo es necesario introducir su DNI" wrappingWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Modificar&quot;: Para modificar un socio de la base de datos solo es necesario introducir su DNI y los campos que se quieran cambiar." wrappingWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Enviar&quot;: Para crear un nuevo usuario en la base de datos, deberás rellenar todos los campos del formulario y pulsar en este botón" wrappingWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>

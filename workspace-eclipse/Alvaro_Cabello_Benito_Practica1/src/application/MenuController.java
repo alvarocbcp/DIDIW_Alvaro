@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Accordion;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -66,11 +67,29 @@ public class MenuController {
 	private void anadirSocio(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
 
-		loader.setLocation(MenuController.class.getResource("/editar/Anadir.fxml"));
+		loader.setLocation(MenuController.class.getResource("/editar/AnadirEditarEliminar.fxml"));
 		
 		GridPane anadir;
 		try {
 			anadir = (GridPane) loader.load();
+
+			rootLayout.setCenter(anadir);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@FXML
+	private void abrirAyuda(ActionEvent event) {
+		FXMLLoader loader = new FXMLLoader();
+
+		loader.setLocation(MenuController.class.getResource("/ayuda/Ayuda.fxml"));
+		
+		Accordion anadir;
+		try {
+			anadir = (Accordion) loader.load();
 
 			rootLayout.setCenter(anadir);
 		} catch (IOException e) {

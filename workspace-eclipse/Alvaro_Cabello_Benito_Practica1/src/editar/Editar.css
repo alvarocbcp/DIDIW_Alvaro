@@ -1,0 +1,13 @@
+#grid{
+	-fx-background-color: lightblue;
+}
+.label{
+	-fx-font-weight: bold;
+	-fx-font-size: 14px;
+}
+#hBoxGenero{
+	-fx-spacing: 100px;
+}
+#hBoxBotones{
+	-fx-spacing: 130px;
+}

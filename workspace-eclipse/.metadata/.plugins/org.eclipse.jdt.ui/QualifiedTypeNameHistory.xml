@@ -29,4 +29,5 @@
     <fullyQualifiedTypeName name="javafx.scene.control.RadioButton"/>
     <fullyQualifiedTypeName name="dinamico.Socio"/>
     <fullyQualifiedTypeName name="editar.ListController"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Accordion"/>
 </qualifiedTypeNameHistroy>
