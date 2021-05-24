@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="draggableFiles.ListController">
+   <children>
+      <Label layoutX="210.0" layoutY="264.0" prefWidth="80.0" text="Arrastra una imagen del explorador" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="label1" layoutX="50.0" layoutY="57.0" text="Source String">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2" layoutX="366.0" layoutY="57.0" text="Destination">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Pane layoutX="104.0" layoutY="144.0" prefHeight="292.0" prefWidth="292.0">
+         <children>
+            <ImageView fx:id="destinoImagen" fitHeight="292.0" fitWidth="292.0" onDragDropped="#handleDrop" onDragOver="#handlerDragOver" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

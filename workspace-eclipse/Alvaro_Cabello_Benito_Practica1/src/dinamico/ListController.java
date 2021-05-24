@@ -47,11 +47,8 @@ public class ListController {
     @FXML
     private TableColumn<Socio, String> localidadCol;
 
-    
-    private ObservableList<Socio> datos = FXCollections.observableArrayList(
-    		new Socio("Álvaro", "Cabello Benito", "65485245F", "alvarocabello@gmail.com", "654654845", 20, "Hombre", "Madrid"),
-    		new Socio("Pablo", "Herrán Castrillo", "74125854G", "pabloherran@gmail.com", "689532147", 56, "Hombre", "Barcelona"),
-    		new Socio("Pablo", "Hormigo González", "45852474J", "pablohormigo@gmail.com", "654654545", 86, "Hombre", "Valencia")
+    @FXML
+    public static ObservableList<Socio> datos = FXCollections.observableArrayList(
     		);
 
     @FXML

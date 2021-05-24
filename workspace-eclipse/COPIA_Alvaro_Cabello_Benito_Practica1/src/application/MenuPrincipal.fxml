@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Inicio">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirSocios" text="Ver Socios" />
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarSocios" text="Cerrar Socios" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#anadirSocio" text="Añadir/Modificar/Eliminar Socio" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirAyuda" text="Controles" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox id="vBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" stylesheets="@MenuPrincipal.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="Bienvenido a la Interfaz">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="50.0" />
+                     </font>
+                  </Label>
+                  <Label text="de Socios del">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="50.0" />
+                     </font>
+                  </Label>
+                  <Label text="Club Atlético de Álvaro">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
