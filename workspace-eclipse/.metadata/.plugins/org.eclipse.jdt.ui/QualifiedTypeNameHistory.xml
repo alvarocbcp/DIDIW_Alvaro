@@ -20,6 +20,7 @@
     <fullyQualifiedTypeName name="javafx.beans.property.SimpleIntegerProperty"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.AnchorPane"/>
     <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+<<<<<<< Updated upstream
     <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
     <fullyQualifiedTypeName name="dinamico.Socio"/>
     <fullyQualifiedTypeName name="editar.ListController"/>
@@ -50,4 +51,19 @@
     <fullyQualifiedTypeName name="javafx.scene.control.Toggle"/>
     <fullyQualifiedTypeName name="javafx.scene.control.RadioButton"/>
     <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
+=======
+    <fullyQualifiedTypeName name="javafx.scene.control.RadioButton"/>
+    <fullyQualifiedTypeName name="dinamico.Socio"/>
+    <fullyQualifiedTypeName name="editar.ListController"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Accordion"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.TextInputDialog"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.DialogPane"/>
+    <fullyQualifiedTypeName name="com.sun.webkit.dom.KeyboardEventImpl"/>
+    <fullyQualifiedTypeName name="com.sun.glass.events.KeyEvent"/>
+    <fullyQualifiedTypeName name="javafx.scene.input.KeyEvent"/>
+    <fullyQualifiedTypeName name="javafx.event.EventHandler"/>
+    <fullyQualifiedTypeName name="javafx.scene.input.KeyCode"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
+    <fullyQualifiedTypeName name="javafx.scene.Cursor"/>
+>>>>>>> Stashed changes
 </qualifiedTypeNameHistroy>
